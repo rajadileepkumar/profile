@@ -1,0 +1,49 @@
+/*Font-Family*/
+@mixin font__family($size: false, $colour: false, $weight: false,  $lh: false,$family:false,$ls:false,$fs:false,$fstyle:false) {
+    @if $family {font-family: $family;}
+    @if $size { font-size: $size; }
+    @if $colour { color: $colour; }
+    @if $weight { font-weight: $weight; }
+    @if $lh { line-height: $lh; }
+    @if $ls {letter-spacing:$ls;}
+    @if $fs {font-stretch: $fs;}
+    @if $fstyle {font-style: $fstyle;}
+}
+
+@mixin float($float:false) {
+    @if $float {float: $float;}
+}
+
+/*Text Decoration*/
+@mixin text__decoration($decoration) {
+    text-decoration: $decoration;
+}
+
+/*Text Transform*/
+@mixin text__transform($transform) {
+    text-transform: $transform;
+}
+
+/*Padding*/
+@mixin padding($values...) {    
+    @each $var in $values {
+        padding: #{$var};
+    }
+}
+
+/*Margins*/
+@mixin margin($values...) {    
+    @each $var in $values {
+        margin: #{$var};
+    }
+}
+
+/*Font Size*/
+@mixin font__size($size) {
+    font-size: $size;
+}
+
+/*Text Align*/
+@mixin text__align($align) {
+    text-align: $align;
+}
